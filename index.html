@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Smart Task Scheduler</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Smart Task Scheduler</h1>
+  </header>
+
+  <main>
+    <section class="card">
+      <form id="taskForm">
+        <input type="text" id="title" placeholder="Task Title" required>
+
+        <select id="priority">
+          <option value="High">High</option>
+          <option value="Medium">Medium</option>
+          <option value="Low">Low</option>
+        </select>
+
+        <input type="datetime-local" id="deadline" required>
+
+        <button type="submit">Add Task</button>
+        <button type="button" id="undoBtn">Undo Delete</button>
+      </form>
+
+      <div id="message" aria-live="polite" class="message"></div>
+    </section>
+
+    <section class="card">
+      <h2>Tasks</h2>
+      <ul id="taskList"></ul>
+    </section>
+  </main>
+
+  <!-- Scripts: utils first, db next, then app (depends on both) -->
+  <script src="utils.js"></script>
+  <script src="db.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

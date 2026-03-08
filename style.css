@@ -1,0 +1,156 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(to right, #a1c4fd, #c2e9fb); /* soft sky-like gradient */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #ffffff;
+  text-shadow: 1px 1px 10px rgba(0,0,0,0.2);
+}
+
+/* Main layout */
+main {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Card style */
+.card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form input[type="text"],
+form input[type="datetime-local"],
+form select {
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus,
+form select:focus {
+  border-color: #6a82fb;
+  box-shadow: 0 0 8px rgba(106,130,251,0.3);
+  outline: none;
+}
+
+/* Buttons */
+form button {
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+form button[type="submit"] {
+  background: linear-gradient(to right, #667eea, #764ba2);
+  color: white;
+}
+
+form button[type="submit"]:hover {
+  background: linear-gradient(to right, #764ba2, #667eea);
+  transform: translateY(-2px);
+}
+
+form button#undoBtn {
+  background: #ff6b6b;
+  color: white;
+}
+
+form button#undoBtn:hover {
+  background: #ff8787;
+  transform: translateY(-2px);
+}
+
+/* Message area */
+.message {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  min-height: 1.2em;
+}
+
+/* Task List */
+#taskList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Wrap the priority and delete in a flex container */
+#taskList li .task-right {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* space between priority and delete button */
+}
+#taskList li {
+  background: #ffffff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#taskList li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+}
+
+/* Priority styling */
+.priority-High {
+  border-left: 5px solid #ff4d4d;
+}
+
+.priority-Medium {
+  border-left: 5px solid #ffa500;
+}
+
+.priority-Low {
+  border-left: 5px solid #4cd137;
+}
