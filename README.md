@@ -68,7 +68,7 @@ Smart Task Scheduler
 1. Download or clone the repository.
 
 ```
-git clone https://github.com/Ushasri1306/smart-task-scheduler.git
+https://github.com/Ushasri1306/Smart-Task-Schedular/
 ```
 
 2. Open the project folder.
